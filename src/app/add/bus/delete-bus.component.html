@@ -1,0 +1,19 @@
+<ion-header translucent>
+    <ion-toolbar color="vibrant">
+        <ion-title>Удалить пользователя</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+
+<ion-content padding>
+    <ion-item>
+        <ion-label>Выберите  пользователя</ion-label>
+        <ion-select [(ngModel)]="bus" cancelText="Отмена" okText="Выбрать">
+            <ion-select-option  *ngFor="let bus of buses" [value]="bus.id">{{bus.number}}</ion-select-option >
+        </ion-select>
+    </ion-item>
+    <div class="btn-delete-bus">
+        <ion-button color="danger" [disabled]="!bus" (click)="deleteUser(bus)">Удалить автобус</ion-button>
+    </div>
+
+</ion-content>

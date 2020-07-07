@@ -1,0 +1,29 @@
+<ion-header translucent>
+    <ion-toolbar color="vibrant">
+        <ion-title>Логин</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+
+<ion-content padding>
+    <div class="main-logo">
+        <img src="https://shyndau.kz/upload/iblock/093/09369733b7421cedcb6dbc2243eccc4a.png" alt="">
+    </div>
+
+    <ion-list>
+        <ion-item>
+            <ion-label floating>Логин</ion-label>
+            <ion-input type="text" [(ngModel)]="username"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label floating>Пароль</ion-label>
+            <ion-input type="password" [(ngModel)]="password"></ion-input>
+        </ion-item>
+    </ion-list>
+
+    <div class="login-btn">
+        <button ion-button block (click)="signIn()">Войти</button>
+    </div>
+
+</ion-content>

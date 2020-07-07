@@ -1,0 +1,19 @@
+<ion-header translucent>
+    <ion-toolbar color="vibrant">
+        <ion-title>Создание автобуса</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+
+<ion-content color="content" [fullscreen]="true" class="ion-padding">
+    <ion-list>
+        <ion-item>
+            <ion-label>Нумерация автобуса #</ion-label>
+            <ion-input type="text" [(ngModel)]="toSave.number"></ion-input>
+        </ion-item>
+    </ion-list>
+    <div class="btn-add-add-bus">
+        <ion-button ion-button block (click)="add(toSave)">Добавить</ion-button>
+    </div>
+
+</ion-content>

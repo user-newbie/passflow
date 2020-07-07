@@ -1,0 +1,72 @@
+ <ion-header translucent>
+    <ion-toolbar color="vibrant">
+        <ion-title>Список</ion-title>
+    </ion-toolbar>
+    <ion-toolbar color="vibrant">
+        <ion-segment value="all"
+                     color="tertiary"
+                     scrollable="true"
+                     mode="ios"
+                     [(ngModel)]="segmentModel"
+                     (ionChange)="segmentChanged($event)">
+            <ion-segment-button value="all">
+                <ion-label>Все</ion-label>
+            </ion-segment-button>
+            <ion-segment-button value="free">
+                <ion-label>Свободные</ion-label>
+            </ion-segment-button>
+        </ion-segment>
+    </ion-toolbar>
+    <div class="refresh-icon" (click)="getBusses()">
+        <img src="assets/img/svg/refresh.svg" alt="refresh">
+    </div>
+</ion-header>
+
+<ion-content color="content" [fullscreen]="true" class="ion-padding">
+    <ng-container *ngIf="user.status === 'admin'">
+        <page-add [inputData]="'bus'"></page-add>
+    </ng-container>
+    <ng-container *ngIf="segmentModel === 'all'">
+        <ion-list *ngFor="let item of items">
+            <ion-list-header color="content">
+                Автобус № {{item.number}}
+            </ion-list-header>
+
+            <ion-item color="content" (click)="openDetail(item)">
+                <ion-avatar slot="start">
+                    <img src="assets/img/png/bus-red.png">
+                </ion-avatar>
+                <ion-label>
+                    <div class="bus-info">
+                        <h3>Статус: </h3>
+                        <p class="status-busy" *ngIf="item.status === 'notfree'">занят</p>
+                        <p class="status-free" *ngIf="item.status === 'free'">свободен</p>
+                    </div>
+                </ion-label>
+            </ion-item>
+        </ion-list>
+    </ng-container>
+
+    <ng-container *ngIf="segmentModel === 'free'">
+        <ion-list *ngFor="let item of items">
+            <ng-container *ngIf="item.status === 'free'">
+                <ion-list-header color="content">
+                    Автобус № {{item.number}}
+                </ion-list-header>
+
+                <ion-item color="content">
+                    <ion-avatar slot="start">
+                        <img src="assets/img/png/bus-red.png">
+                    </ion-avatar>
+                    <ion-label>
+                        <div class="bus-info">
+                            <h3>Статус: </h3>
+                            <p class="status-free">свободен</p>
+                        </div>
+                    </ion-label>
+                </ion-item>
+            </ng-container>
+
+        </ion-list>
+    </ng-container>
+</ion-content>

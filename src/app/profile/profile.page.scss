@@ -1,0 +1,31 @@
+page-cabinet {
+  ion-icon {
+    color: white;
+  }
+  .cabinet-img {
+    text-align: center;
+    img {
+      max-width: 200px;
+    }
+  }
+}
+
+.profile-logout {
+  img {
+    width: 22px;
+    position: absolute;
+    right: 14px;
+    top: 9px;
+    z-index: 10;
+  }
+}
+
+.create-btn {
+
+  button {
+    padding: 20px;
+    min-width: 140px;
+    background-color: green;
+    color: white;
+  }
+}

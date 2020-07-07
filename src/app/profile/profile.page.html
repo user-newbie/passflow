@@ -1,0 +1,37 @@
+<ion-header translucent>
+    <ion-toolbar color="vibrant">
+        <ion-title>Кабинет</ion-title>
+    </ion-toolbar>
+    <div class="profile-logout" (click)="logoutClicked()">
+        <img src="assets/img/svg/logout.svg" alt="logout">
+    </div>
+</ion-header>
+
+<ion-content padding>
+    <p class="cabinet-img">
+        <img src="https://previews.123rf.com/images/panyamail/panyamail1809/panyamail180900343/109879063-user-avatar-icon-sign-profile-symbol.jpg">
+    </p>
+    <ion-list>
+        <ion-item>
+            ФИО
+            <p item-end>Админ</p>
+        </ion-item>
+
+        <ion-item>
+            Телефон
+            <p item-end>+77788446744</p>
+        </ion-item>
+
+        <ion-item>
+            E-mail
+            <p item-end>maratov.elzh@gmail.com</p>
+        </ion-item>
+    </ion-list>
+    <div>
+
+    </div>
+    <ng-container *ngIf="user.status === 'admin'">
+        <page-add [inputData]="'profile'"></page-add>
+    </ng-container>
+<!--    <button *ngIf="user.status === 'admin'" ion-button block (click)="createUser()">Войти</button>-->
+</ion-content>

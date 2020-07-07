@@ -1,0 +1,19 @@
+<div *ngIf="inputData === 'profile'">
+    <div class="btn-create-user">
+        <ion-button class="button-c" (click)="goToCreateUser()">Создать пользователя</ion-button>
+    </div>
+
+    <div class="btn-create-user">
+        <ion-button color="danger" class="button-c" (click)="goToDeleteUser()">Удалить пользователя</ion-button>
+    </div>
+</div>
+
+<div *ngIf="inputData === 'bus'">
+    <div class="btn-create-user">
+        <ion-button class="button-c" (click)="goToCreateBus()">Добавить автобус</ion-button>
+    </div>
+
+    <div class="btn-create-user">
+        <ion-button color="danger" class="button-c" (click)="goToDeleteBus()">Удалить автобус</ion-button>
+    </div>
+</div>

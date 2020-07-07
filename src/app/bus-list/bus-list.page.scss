@@ -1,0 +1,32 @@
+.bus-info {
+  display: flex;
+  flex-direction: row;
+
+  h3 {
+    margin-right: 5px;
+  }
+
+  p {
+    font-weight: bold;
+  }
+
+  .status-busy {
+    color: #d63333;;
+  }
+
+  .status-free {
+    color: #429242;
+  }
+
+}
+
+
+.refresh-icon {
+  img {
+    width: 25px;
+    position: absolute;
+    right: 14px;
+    top: 29px;
+    z-index: 10;
+  }
+}
