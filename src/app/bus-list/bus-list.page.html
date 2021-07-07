@@ -17,9 +17,9 @@
             </ion-segment-button>
         </ion-segment>
     </ion-toolbar>
-    <div class="refresh-icon" (click)="getBusses()">
+   <!-- <div class="refresh-icon" (click)="getBusses()">
         <img src="assets/img/svg/refresh.svg" alt="refresh">
-    </div>
+    </div>-->
 </ion-header>
 
 <ion-content color="content" [fullscreen]="true" class="ion-padding">
@@ -39,7 +39,7 @@
                 <ion-label>
                     <div class="bus-info">
                         <h3>Статус: </h3>
-                        <p class="status-busy" *ngIf="item.status === 'notfree'">занят</p>
+                        <p class="status-busy" *ngIf="item.status === 'not-free'">занят</p>
                         <p class="status-free" *ngIf="item.status === 'free'">свободен</p>
                     </div>
                 </ion-label>

@@ -10,6 +10,16 @@ page-cabinet {
   }
 }
 
+.refresh-icon {
+  img {
+    width: 21px;
+    position: absolute;
+    left: 27px;
+    top: 15px;
+    z-index: 10;
+  }
+}
+
 .profile-logout {
   img {
     width: 22px;
@@ -28,4 +38,13 @@ page-cabinet {
     background-color: green;
     color: white;
   }
+}
+
+p {
+  margin-left: 20px;
+}
+
+
+.hydrated {
+  text-align: center !important;
 }

@@ -23,10 +23,19 @@
 
 .refresh-icon {
   img {
-    width: 25px;
+    width: 21px;
     position: absolute;
     right: 14px;
-    top: 29px;
+    top: 13px;
     z-index: 10;
   }
 }
+
+.list-md {
+  background: none !important;
+}
+
+.hydrated {
+  text-align: center !important;
+}
+

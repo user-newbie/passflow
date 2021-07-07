@@ -19,10 +19,11 @@ export class AddUserComponent {
                 private router: Router) {}
 
     async add(toSave) {
-        toSave.status = 'user';
-        this.authService.addUser(toSave).subscribe(data => {
+        toSave.role = 'createdUser';
+        /*this.authService.addUser(toSave).subscribe(data => {
             console.log(data);
-        });
+        });*/
+        sessionStorage.setItem('createdUser', JSON.stringify(toSave));
         const alert = await this.alert.create({
             header: 'Пользователь добавлен!',
             message: 'Пользователь успешно добавлен',

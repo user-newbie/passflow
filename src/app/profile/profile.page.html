@@ -7,11 +7,15 @@
     </div>
 </ion-header>
 
+ <div class="refresh-icon" (click)="refresh()">
+      <img src="assets/img/svg/refresh.svg" alt="refresh">
+  </div>
+
 <ion-content padding>
     <p class="cabinet-img">
         <img src="https://previews.123rf.com/images/panyamail/panyamail1809/panyamail180900343/109879063-user-avatar-icon-sign-profile-symbol.jpg">
     </p>
-    <ion-list>
+    <ion-list *ngIf="user.role === 'admin'">
         <ion-item>
             ФИО
             <p item-end>Админ</p>
@@ -24,14 +28,50 @@
 
         <ion-item>
             E-mail
-            <p item-end>maratov.elzh@gmail.com</p>
+            <p item-end>tco-admin@gmail.com</p>
+        </ion-item>
+    </ion-list>
+
+    <ion-list *ngIf="user.role === 'createdUser'">
+        <ion-item>
+            ФИО
+            <p item-end>{{sessionStorUser.name}}</p>
+        </ion-item>
+
+        <ion-item>
+            Телефон
+            <p item-end>+{{sessionStorUser.phone}}</p>
+        </ion-item>
+
+        <ion-item>
+            E-mail
+            <p item-end>{{sessionStorUser.email}}</p>
+        </ion-item>
+    </ion-list>
+
+    <ion-list *ngIf="user.role === 'user'">
+        <ion-item>
+            ФИО
+            <p item-end>Контролер</p>
+        </ion-item>
+
+        <ion-item>
+            Телефон
+            <p item-end>+77789996576</p>
+        </ion-item>
+
+        <ion-item>
+            E-mail
+            <p item-end>tso-controler@gmail.com</p>
         </ion-item>
     </ion-list>
     <div>
 
     </div>
-    <ng-container *ngIf="user.status === 'admin'">
+    <ng-container *ngIf="user.role === 'admin'">
         <page-add [inputData]="'profile'"></page-add>
     </ng-container>
-<!--    <button *ngIf="user.status === 'admin'" ion-button block (click)="createUser()">Войти</button>-->
+<!--
+    <button *ngIf="user.role === 'admin'" ion-button block (click)="createUser()">Войти</button>
+-->
 </ion-content>

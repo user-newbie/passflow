@@ -1,6 +1,11 @@
 *,*:before,*:after {
   box-sizing: border-box;
 }
+
+.hydrated {
+  text-align: center !important;
+}
+
 html {
   font-size: 16px;
 }

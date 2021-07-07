@@ -23,7 +23,7 @@
     </ion-list>
 
     <div class="login-btn">
-        <button ion-button block (click)="signIn()">Войти</button>
+        <button ion-button [disabled]="password === ''" (click)="signIn()">Войти</button>
     </div>
 
 </ion-content>
