@@ -13,7 +13,7 @@
                 <ion-label>Все</ion-label>
             </ion-segment-button>
             <ion-segment-button value="free">
-                <ion-label>Свободные</ion-label>
+                <ion-label>Сегодня</ion-label>
             </ion-segment-button>
         </ion-segment>
     </ion-toolbar>
@@ -29,18 +29,18 @@
     <ng-container *ngIf="segmentModel === 'all'">
         <ion-list *ngFor="let item of items">
             <ion-list-header color="content">
-                Автобус № {{item.number}}
+                {{item.number}}
             </ion-list-header>
 
             <ion-item color="content" (click)="openDetail(item)">
                 <ion-avatar slot="start">
-                    <img src="assets/img/png/bus-red.png">
+                    <img src="assets/book.png">
                 </ion-avatar>
                 <ion-label>
                     <div class="bus-info">
-                        <h3>Статус: </h3>
-                        <p class="status-busy" *ngIf="item.status === 'not-free'">занят</p>
-                        <p class="status-free" *ngIf="item.status === 'free'">свободен</p>
+                        <h3>Сегодня: </h3>
+                        <p class="status-busy" *ngIf="item.status === 'not-free'">Нет</p>
+                        <p class="status-free" *ngIf="item.status === 'free'">Да</p>
                     </div>
                 </ion-label>
             </ion-item>
@@ -51,17 +51,17 @@
         <ion-list *ngFor="let item of items">
             <ng-container *ngIf="item.status === 'free'">
                 <ion-list-header color="content">
-                    Автобус № {{item.number}}
+                    {{item.number}}
                 </ion-list-header>
 
                 <ion-item color="content">
                     <ion-avatar slot="start">
-                        <img src="assets/img/png/bus-red.png">
+                        <img src="assets/book.png">
                     </ion-avatar>
                     <ion-label>
                         <div class="bus-info">
-                            <h3>Статус: </h3>
-                            <p class="status-free">свободен</p>
+                            <h3>Сегодня: </h3>
+                            <p class="status-free">Да</p>
                         </div>
                     </ion-label>
                 </ion-item>

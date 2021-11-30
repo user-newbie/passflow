@@ -88,13 +88,64 @@ export class BusDetailPage implements OnInit {
 
     item: any;
 
+    subjects = [
+        {
+            'id': 1,
+            'number': 'Математический анализ',
+            'status': 'free'
+        },
+        {
+            'id': 2,
+            'number': 'Социология',
+            'status': 'not-free'
+        },
+        {
+            'id': 3,
+            'number': 'Английский язык',
+            'status': 'free'
+        },
+        {
+            'id': 4,
+            'number': 'Алгоритмизация',
+            'status': 'not-free'
+        },
+        {
+            'id': 5,
+            'number': 'Дискретная математика',
+            'status': 'not-free'
+        },
+        {
+            'id': 6,
+            'number': 'История',
+            'status': 'free'
+        },
+        {
+            'id': 7,
+            'number': 'История',
+            'status': 'not-free'
+        },
+        {
+            'id': 8,
+            'number': 'Структура данных',
+            'status': 'free'
+        }
+    ];
+
     constructor(private route: ActivatedRoute,
                 private busService: BusService) {}
 
     ngOnInit() {
         const id = this.route.snapshot.params['id'];
-        this.busService.getBusById(id).subscribe( res => {
-          this.item = res;
-        });
+   /*     this.subjects.forEach(i => {
+            i.id = id;
+            console.log(i);
+        });*/
+        return this.subjects.find(x => x.id === id);
+        this.getDimensionsByFind();
+    }
+
+     getDimensionsByFind(){
+        const id = this.route.snapshot.params['id'];
+        return this.subjects.find(x => x.id === id);
     }
 }

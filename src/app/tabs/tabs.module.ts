@@ -14,6 +14,8 @@ import {AddBusComponent} from "../add/bus/add-bus.component";
 import {AddComponent} from "../add/add.component";
 import {DeleteUserComponent} from "../add/user/delete-user.component";
 import {DeleteBusComponent} from "../add/bus/delete-bus.component";
+import {CalendarComponent} from '../calendar/calendar.component';
+import {UniversityPage} from '../university/university.component';
 
 @NgModule({
     imports: [
@@ -31,13 +33,17 @@ import {DeleteBusComponent} from "../add/bus/delete-bus.component";
       AddBusComponent,
       AddComponent,
       DeleteUserComponent,
-      DeleteBusComponent
+      DeleteBusComponent,
+      CalendarComponent,
+      UniversityPage
     ],
     entryComponents: [
       TabsPage,
       BusListPage,
       BusDetailPage,
-      ProfilePage
+      ProfilePage,
+      CalendarComponent,
+      UniversityPage
     ],
     bootstrap: [
       TabsPage,
@@ -48,7 +54,9 @@ import {DeleteBusComponent} from "../add/bus/delete-bus.component";
       AddBusComponent,
       AddComponent,
       DeleteUserComponent,
-      DeleteBusComponent
+      DeleteBusComponent,
+      CalendarComponent,
+      UniversityPage
     ]
 })
 export class TabsPageModule {}

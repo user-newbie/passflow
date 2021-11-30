@@ -9,6 +9,8 @@ import {AddUserComponent} from "../add/user/add-user.component";
 import {AddBusComponent} from "../add/bus/add-bus.component";
 import {DeleteUserComponent} from "../add/user/delete-user.component";
 import {DeleteBusComponent} from "../add/bus/delete-bus.component";
+import {UniversityPage} from '../university/university.component';
+import {CalendarComponent} from '../calendar/calendar.component';
 
 const routes: Routes = [
     {
@@ -26,6 +28,14 @@ const routes: Routes = [
             {
                 path: 'profile',
                 component: ProfilePage
+            },
+            {
+                path: 'university',
+                component: UniversityPage
+            },
+            {
+              path: 'calendar',
+              component: CalendarComponent
             },
             {
                 path: 'add',

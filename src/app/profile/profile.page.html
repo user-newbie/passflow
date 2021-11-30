@@ -18,17 +18,25 @@
     <ion-list *ngIf="user.role === 'admin'">
         <ion-item>
             ФИО
-            <p item-end>Админ</p>
+            <p item-end>Ильхамов Ельдос</p>
         </ion-item>
 
         <ion-item>
             Телефон
-            <p item-end>+77788446744</p>
+            <p item-end>87788446744</p>
         </ion-item>
 
         <ion-item>
             E-mail
-            <p item-end>tco-admin@gmail.com</p>
+            <p item-end>ilhamoveldos@gmail.com</p>
+        </ion-item>
+   <!--     <ion-item>
+            Предмет
+            <p item-end>Математический анализ</p>
+        </ion-item>-->
+        <ion-item>
+            Курс
+            <p item-end>2</p>
         </ion-item>
     </ion-list>
 
@@ -46,6 +54,10 @@
         <ion-item>
             E-mail
             <p item-end>{{sessionStorUser.email}}</p>
+        </ion-item>
+        <ion-item>
+            Курс
+            <p item-end>2</p>
         </ion-item>
     </ion-list>
 
@@ -68,9 +80,9 @@
     <div>
 
     </div>
-    <ng-container *ngIf="user.role === 'admin'">
+<!--    <ng-container *ngIf="user.role === 'admin'">
         <page-add [inputData]="'profile'"></page-add>
-    </ng-container>
+    </ng-container>-->
 <!--
     <button *ngIf="user.role === 'admin'" ion-button block (click)="createUser()">Войти</button>
 -->

@@ -13,39 +13,44 @@ export class BusListPage implements OnInit{
     items = [
         {
             'id': 1,
-            'number': 1,
+            'number': 'Математический анализ',
             'status': 'free'
         },
         {
             'id': 2,
-            'number': 2,
+            'number': 'Социология',
             'status': 'not-free'
         },
         {
             'id': 3,
-            'number': 3,
+            'number': 'Английский язык',
             'status': 'free'
         },
         {
             'id': 4,
-            'number': 4,
+            'number': 'Алгоритмизация',
             'status': 'not-free'
         },
         {
             'id': 5,
-            'number': 5,
+            'number': 'Дискретная математика',
             'status': 'not-free'
         },
         {
             'id': 6,
-            'number': 6,
+            'number': 'История',
             'status': 'free'
         },
         {
             'id': 7,
-            'number': 7,
+            'number': 'История',
             'status': 'not-free'
         },
+        {
+            'id': 8,
+            'number': 'Структура данных',
+            'status': 'free'
+        }
     ];
     segmentModel = "all";
     user: any;
